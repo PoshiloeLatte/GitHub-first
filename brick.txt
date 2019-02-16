@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+setlocale(LC_ALL,"Rus");
+system("COLOR 02");
+int a;
+int b;
+int c;
+int n;//высота кирпича
+int m;//высота отверстия
+cout<<"введите длину кирпича "<<endl;
+cin>>a;
+cout<<"введите ширину кирпича"<<endl;
+cin>>b;
+cout<<"введите высоту кирпича"<<endl;
+cin>>n;
+cout<<"введите длину отверстия"<<endl;
+cin>>c;
+cout<<"введите высоту отверстия"<<endl;
+cin>>m;
+if ((b <= c) && (n <= m))
+{
+cout<<"кирпич влезет"<<endl;
+}
+if ((a <= c) && (n <= m)
+{
+	cout<<"кирпич влезет"<<endl;
+}
+if (() && ()
+{
+	cout<<"кирпич влезет"<<endl;
+}
+system ("pause");
+}

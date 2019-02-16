@@ -1,0 +1,66 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "RUSSIAN");
+	srand(time(NULL));
+	const int n=5;
+	float mas[n];
+	float sum = 0;
+	cout << "масив:" << endl;
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = rand() % 100 - 511 / 10.0;
+		cout << mas[i] << endl;
+		if (mas[i] < 0)
+		{
+			sum = sum + mas[i];
+		}
+	}
+
+	cout << "Сумма отрицательных членов масива:" << sum << endl;
+	float min = 0;
+	sum = 0;
+	int pos_max = 0;
+	int pos_min = 0;
+	float max = 0;
+	int umn = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (mas[i] > max)
+		{
+			max = mas[i];
+			pos_max = i;
+		}
+		if (mas[i] < min)
+		{
+			min = mas[i];
+			pos_min = i;
+		}
+	}
+
+	for (int i = pos_min + 1; i < pos_max; i++)
+	{
+		umn = mas[i] * mas[i + 1];
+	}
+	cout << "произведение элементов массива, расположенных между максимальным и минимальным элементами:" << umn << endl;
+				
+	cout << "Задайте интервал:" << endl;
+	int a;
+	int b;
+	cin >> a;
+	cin >> b;
+	for (int i = 0; i < n; i++)
+	{
+		if (abs(mas[i])<b && abs(mas[i])>a)
+		{
+			mas[i] = 0;
+		}
+		cout << mas[i] << endl;
+	}
+	
+	system("pause");
+}

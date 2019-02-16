@@ -1,0 +1,43 @@
+#include <iostream>
+#include <ctime>
+#include <vector>
+#include <string>
+using namespace std;
+
+void main()
+{
+
+	setlocale(LC_ALL, "Rus");
+	srand(time(NULL));
+	char like = 'l';
+	char like1 = 'i';
+	char like2 = 'k';
+	char like3 = 'e';
+	char like4 = ' ';
+	string text;
+	
+	getline(cin, text);
+		for (int i = 0; i < text.length(); i++)
+		{
+			if (like == text[i] && text[i-1] == like4)
+			{
+				if (like1 == text[i+1] )
+				{
+					if (like2 == text[i+2] )
+					{
+						if (like3 == text[i+3] && text[i+4] == like4)
+						{
+							cout << "Yes" << endl;
+						}
+					}
+				}
+			}
+		}
+
+
+
+
+
+	
+	system("pause");
+}

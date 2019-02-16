@@ -1,0 +1,32 @@
+{
+	setlocale(LC_ALL,"Rus");
+	srand(time(NULL));
+
+	bool n= true;
+	int m;
+	
+	
+		cout<<"enter number"<<endl;
+		cin>>m;
+		if(m%1==0)
+		{
+			n=false;
+		}
+		if(m%m==0)
+		{
+			n=false;
+		}
+		if(m=1)
+		{
+			n=true;
+		}
+	if(n==false)
+		{
+			
+			cout<<"простое"<<endl;
+		}
+	if(n==true)
+		{
+			
+			cout<<"не простое"<<endl;
+		}

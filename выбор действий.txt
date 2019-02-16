@@ -1,0 +1,113 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+void print(int* m, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << m[i] << "  "; 
+	}
+	cout << endl;
+}
+void fill(int* m, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		m[i] = rand() % 50;
+	}
+}
+void sort(int*m, int size,bool f)
+{
+	
+	if (f == true)
+	{
+		for (int i = 0; i < size - 1; i++)
+		{
+			for (int j = 0; j < size - 1; j++)
+			{
+				if (m[j] > m[j + 1])
+				{
+					swap(m[j], m[j + 1]);
+				}
+			}
+		}
+	}
+	else
+	{
+		for (int i = 0; i < size - 1; i++)
+		{
+			for (int j = 0; j < size - 1; j++)
+			{
+				if (m[j] < m[j + 1])
+				{
+					swap(m[j], m[j + 1]);
+				}
+			}
+		}
+	}
+}
+int maximum(int*m, int size)
+{
+	int max=0;
+	for (int i = 0; i < size; i++)
+	{
+		if (m[i] > max)
+		{
+			max = m[i];
+		}
+	}
+	cout << max << endl;
+	return max;
+}
+int main()
+{
+	int sw;
+	setlocale(LC_ALL, "Rus");
+	srand(time(NULL));
+	int n;
+	bool f=true;
+	cout << "enter size" << endl;
+	cin >> n;
+	int* mas = new int [n];
+	cout << "1 заполнение масива" << endl;
+	cout << "2вывод масива" << endl;
+	cout << "3 сортировка масива" << endl;
+	cout << "4 поиск максимума" << endl;
+	
+	while (true)
+	{
+		cin >> sw;
+		switch (sw)
+	  {
+		
+		case 1:
+		{
+			fill(mas, n);
+		}
+		break;
+		case 2:
+		{
+			print(mas, n);
+		}
+		break;
+		case 3:
+		{
+			sort(mas, n, true);
+			break;
+		}
+		case 4:
+		{
+			maximum(mas, n);
+		}
+		break;
+		default:
+		{
+			continue;
+		}
+	  }
+		
+	}
+	delete[] mas;
+	system("pause");
+}
+//1 заполнение 2 вывод 3сортировка 4 поиск максимума

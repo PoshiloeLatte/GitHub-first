@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL,"Rus");
+	double z;
+	cout<<"введите первое число"<<endl;
+	cin>>z;
+
+
+
+
+	double m;
+	cout<<"введите второе число"<<endl;
+	cin>>m;
+
+	if (z > m)
+	{
+		cout<<z<<">"<<m<<endl;
+	}
+	else
+	{
+		cout<<m<<">"<<z<<endl;
+	}
+
+
+
+	system("pause");
+}

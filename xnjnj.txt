@@ -1,0 +1,38 @@
+int month;
+	cout<<"введите номер мес€ца"<<endl;
+	cin>>month;
+
+
+	if ((month > 0) && (month<3) && (month == 12))
+	{
+		    
+		cout<<"это зима "<<endl;
+	}
+	if (month == 12)
+       {
+		   cout<<"это зима"<<endl;
+	}
+	if ((month > 2) && (month < 6))
+	{
+		cout<<"это весна"<<endl;
+	}
+	
+	if ((month > 5) && (month < 9))
+	{
+		cout<<"это лето"<<endl;
+	}
+
+	if ((month > 8) && (month < 12))
+	{ 
+		cout<<"это осень"<<endl;
+	}
+
+	if (month > 12)
+	{
+		cout<<"такого мес€ца нет"<<endl;
+	}
+
+	if (month < 1)
+	{
+		cout<<"такого мес€ца нет"<<endl;
+	}
