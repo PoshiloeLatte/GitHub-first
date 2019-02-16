@@ -4,12 +4,13 @@ using namespace std;
 
 void main()
 {
+
 	setlocale(LC_ALL,"Rus");
 	double z;
 	cout<<"введите первое число"<<endl;
 	cin>>z;
 
-
+cout<<"изменение"<<endl;
 
 
 	double m;
